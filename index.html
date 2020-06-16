@@ -24,12 +24,11 @@
 var mymap = L.map('mapid').setView([46.8523, -121.7603], 10);
 
 L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
-	maxZoom: 17,
-	
+	attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
 }).addTo(mymap);
 
 var marker = L.marker([46.8523, -121.7603]).addTo(mymap);
-marker.bindPopup("<b>Mount Rainier National Park</b><br>I am a mountain and a volcano!").openPopup();
+marker.bindPopup("<b>Mount Rainier National Park</b><br>I am a mountain and a big volcano!").openPopup();
 
 
 </script>
