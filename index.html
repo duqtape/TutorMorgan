@@ -85,8 +85,17 @@ var baseMaps = {
 var vectors = {
     "Mount Rainer National Park": layer_MtRainier
 };
+
+var georeferenced = {
+	"Historic 1914 Image": georeferenced
+};
+
+L.control.layers(baseMaps, vectors, georeferenced).addTo(map);
 	
-L.control.layers(baseMaps, vectors).addTo(map);
+var baseMaps = {
+    "<span style='color: gray'>Imagery</span>": Imagery,
+    "Mount Rainier National Park": layer_MtRainier
+};
 </script>
 
 
