@@ -68,6 +68,8 @@ L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/
 
 var marker = L.marker([46.8523, -121.7603]).addTo(mymap);
 marker.bindPopup("<b>Mount Rainier National Park</b><br>I am a mountain and a really big volcano!").openPopup();
+	
+L.control.layers(baseMaps, overlayMaps).addTo(map);
 </script>
 
 
