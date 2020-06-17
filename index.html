@@ -15,13 +15,18 @@
 
 <body>
 
-<div id="map"></div>
+<div id="mapid"></div>
 <script src="MtRainier.js"></script>	
 <style>
-    #map{ width:100%; height:900px; }
+    #mapid{ width:100%; height:900px; }
 </style>
 
 <script>
+var map = L.map('mapid', {
+    center: [46.8523, -121.7603],
+    zoom: 12,
+    layers: [Imagery]
+});
 	
 var Imagery = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
 	attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
@@ -40,11 +45,7 @@ georeferenced = L.tileLayer('./RainierTiles/{z}/{x}/{y}.png', {
 var marker = L.marker([46.8523, -121.7603]).addTo(map);
 marker.bindPopup("<b>Mount Rainier National Park</b><br>I am a mountain and a really big volcano!").openPopup();
 
-var map = L.map('map', {
-    center: [46.8523, -121.7603],
-    zoom: 12,
-    layers: [Imagery]
-});
+
 
 var baseMaps = {
     "Imagery": Imagery,
